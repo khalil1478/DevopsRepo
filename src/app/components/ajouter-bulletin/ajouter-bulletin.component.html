@@ -1,0 +1,74 @@
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title  " style="text-align: center;">Ajouter bulletin de soins </h4>
+        <br>
+        <form class="forms-sample"  #bulletinForm="ngForm" (ngSubmit)= "ajout_bulletin(bulletinForm)">
+        
+         
+          
+        <div class="row ">
+          <div class="form-group col-md-3">
+            <label for="exampleInputName1" >category</label>
+            
+            
+            <select  class="form-control" (change)="onChangeCategory($event)"  >
+            <option *ngFor="let category of CategorieList"  value={{category.id}} >{{category.nom}}</option>
+            </select>
+                                  
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="exampleInputName1" >sous _category</label>
+            
+            
+            <select  class="form-control"  ngModel name="idsc"  (change)="onChangesousCategory($event)" >
+            <option *ngFor="let sous_category of Sous_CategorieList"   value={{sous_category.id}}>{{sous_category.nom}}</option>
+            </select>
+                                  
+          </div>
+
+          <div   class="form-group col-md-4"     >
+            <label for="exampleInputEmail3">nom_docteur</label>
+            <select  class="form-control"  ngModel name="docteur"    (change)="onChangedocteuur($event)">
+            <option *ngFor="let docteur of docteur_list"  value={{docteur.id}} >{{docteur.name}}</option>
+            </select>
+            <br>
+            <input type="text" class="form-control" ngModel   name="name_docteur"  *ngIf="this.nom_docteur ===true" id="exampleInputName1" placeholder="name">
+
+          </div>
+        
+          
+     
+        </div>
+
+        <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >montant_dep</label>
+            <input type="text"   ngModel  name="montant_dep" class="form-control" id="exampleInputName1" placeholder="montant_dep">
+          </div>
+         
+          <div  *ngIf="this.valeur ===true" class="form-group col-md-3">
+            <label for="exampleInputName1" >valeur</label>
+            <input type="text" class="form-control"  ngModel  name="valeur" id="exampleInputName1" placeholder="valeur">
+          </div>
+
+
+
+        
+        
+        </div>
+          
+        
+
+
+
+
+        <div  style="text-align: center;">
+          <button type="submit" class="btn btn-gradient-primary mr-2 " >ajouter bulletin de soins</button>
+          <button  type ="button"  class="btn btn-light" >cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

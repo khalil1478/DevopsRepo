@@ -1,0 +1,48 @@
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title  " style="text-align: center;">datails bulletins </h4>
+        <br>
+          <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >montant_dep</label>
+            <input type="text"   [(ngModel)] ="bulletinToDetails.montant_dep"  name="montant_dep" class="form-control" id="exampleInputName1" readonly>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">montant_remboursement</label>
+            <input type="text" [(ngModel)] ="bulletinToDetails.montant_remboursement"name="montant_remboursement"class="form-control" id="exampleInputEmail3" readonly >
+          </div>
+          <div class="form-group col-md-3">
+            <label for="exampleInputName1" >nom_docteur</label>
+            <input type="text" class="form-control"  ngModel [(ngModel)] ="bulletinToDetails.docteur.name"  name="nom_docteur" id="exampleInputName1"  readonly>
+          </div>
+         
+        </div>
+  
+        <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >valeur</label>
+            
+            <input type="text"  [(ngModel)] ="bulletinToDetails.valeur"  name="valeur" class="form-control" id="exampleInputName1" readonly >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">category </label>
+            <input type="text" [(ngModel)] ="bulletinToDetails.category.nom" name="nom" class="form-control" id="exampleInputEmail3"  readonly>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="exampleInputName1" >adherent</label>
+              <input class="form-control"  type="text"  [(ngModel)] ="bulletinToDetails.adherent.nom" name="adhnom"  readonly />
+          </div>
+        </div>
+          
+      
+          
+        
+  
+  
+  
+  
+       
+      </div>
+    </div>
+  </div>

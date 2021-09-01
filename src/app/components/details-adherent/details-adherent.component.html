@@ -1,0 +1,109 @@
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title  " style="text-align: center;">détails adherents </h4>
+        <br>
+          <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >nom</label>
+            <input type="text"   [(ngModel)] ="adherenToDetails.nom"  name="nom" class="form-control" id="exampleInputName1" readonly>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">prenom</label>
+            <input type="text" [(ngModel)] ="adherenToDetails.prenom" name="prenom" class="form-control" id="exampleInputEmail3" readonly >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">prenom</label>
+            <input type="text" [(ngModel)] ="adherenToDetails.typesocial" name="typesocial" class="form-control" id="exampleInputEmail3" readonly >
+          </div>
+         
+        </div>
+  
+        <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >matricule</label>
+            
+            <input type="text"  [(ngModel)] ="adherenToDetails.matricule"  name="matricule" class="form-control" id="exampleInputName1" readonly >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">situationfamiliale </label>
+            <input type="text" [(ngModel)] ="adherenToDetails.situationfamiliale" name="situationfamiliale" class="form-control" id="exampleInputEmail3"  readonly>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="exampleInputName1" >typeadh</label>
+              <input class="form-control"  type="text"  [(ngModel)] ="adherenToDetails.typeadh" name="typeadh"  readonly />
+          </div>
+        </div>
+
+        <div class="row ">
+            <div class="form-group col-md-4">
+              <label for="exampleInputName1" >ville</label>
+              
+              <input type="text"  [(ngModel)] ="adherenToDetails.ville"  name="ville" class="form-control" id="exampleInputName1" readonly >
+            </div>
+            
+            <div class="form-group col-md-3">
+              <label for="exampleInputName1" >typeadh</label>
+                <input class="form-control"  type="text"  [(ngModel)] ="adherenToDetails.typeadh" name="typeadh"  readonly />
+            </div>
+          </div>
+          
+      
+       
+          
+
+    
+
+
+          <div style="text-align: center;" >
+<div class="form-group" *ngIf="adherenToDetails.typesocial==='ENFANT'">
+<label for="annee">Annee</label>
+    <select  id="annee"  name="annee" class="form-control"    (change)="onChangeinput_file($event)"  >
+      <option  *ngFor="let item of list_date_enfant" value="{{item.date}}">
+        {{item.date}}
+      </option>
+    </select>
+   
+ </div>  
+
+</div>
+
+<div class="add-items d-flex"  *ngIf="visibilite_file">
+  <input type="file" class="form-control todo-list-input" placeholder="What do you need to do today?">
+  <button class="add btn btn-gradient-primary font-weight-bold todo-list-add-btn" id="add-task">Add</button>
+</div>
+
+<!--/Dropdown primary-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+  
+       
+      </div>
+    </div>
+
+    
+  </div>
+
+  

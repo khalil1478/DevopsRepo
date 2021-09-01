@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-12 grid-margin">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Liste  sous category</h4>
+          <div class="add-items d-flex">
+
+            <input type="search"          name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search category..." required>
+
+
+         
+          
+        </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> nom</th>  
+                  <th> libelle </th>
+                  <th> duree </th>
+                  <th> max </th>
+                  <th>valeur</th>
+              
+                <th> type</th>  
+
+                <th> action</th>  
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let category of list_sous_category">
+                  <td> {{category.nom}}</td>
+                  <td> {{category.libelle}} </td>
+                  <td> {{category.duree}} </td>
+                  <td> {{category.max}}</td>
+                  <td> {{category.montant}}</td>
+                  <td>  {{category.type}}</td>
+                 
+                  <td> 
+                  
+
+                   <!-- Button to Open the Modal -->
+<button type="button"  class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#myModal">
+  supprimer
+</button>
+
+<br><br>
+<button type="button"  (click) ="modifier_category(category.id)" class="btn btn-outline-warning btn-sm">modifier </button> 
+
+
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Warnning</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        voulez vous supprimé {{category.nom}}
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">non</button>
+     
+     
+        <button type="button" (click) ="delete_category(category.id)" class="btn btn-danger" data-dismiss="modal">oui</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                  </td>
+                </tr>
+           
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

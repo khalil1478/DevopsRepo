@@ -1,0 +1,94 @@
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title  " style="text-align: center;">Ajouter Adherent </h4>
+        <br>
+        <form class="forms-sample" #adherentForm="ngForm" (ngSubmit)= "add_sous_adherent(adherentForm)">
+          <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >nom</label>
+            <input type="text"   ngModel  name="nom" class="form-control" id="exampleInputName1" placeholder="Name">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">prenom</label>
+            <input type="text"  ngModel  name="prenom" class="form-control" id="exampleInputEmail3" placeholder="prenom">
+          </div>
+         
+         
+        </div>
+
+        <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >adresse</label>
+            <input type="text"   ngModel  name="adresse"class="form-control" id="exampleInputName1" placeholder="adresse">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">Email </label>
+            <input type="email"  ngModel  name="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="exampleInputName1" >Date of Birth</label>
+              <input class="form-control"  type="date"  ngModel   ngModel name="date" placeholder="dd/mm/yyyy" />
+          </div>
+        </div>
+          
+          
+        <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >Ville</label>
+            
+            
+                <select class="form-control" ngModel name="ville" >
+                  <option value="TUNIS">TUNIS</option>
+                  <option value="ZARZIS">ZARZIS</option>
+                  <option  value="SFAX">SFAX</option>
+                  <option  value="BIZERTE">BIZERTE</option>
+                  <option  value="GABES">GABES</option>
+
+                </select>
+                                  
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3"> typesocial </label>
+            <select class="form-control"   ngModel name="typesocial" >
+              <option value="ASCENDANT">ASCENDANT</option>
+              <option value="ENFANT">ENFANT</option>
+              <option  value="CONJOINT">CONJOINT</option>
+              <option  value="ASSURE_SOCIAL">ASSURE_SOCIAL</option>
+            </select>
+      
+          </div>
+          <div class="form-group col-md-3">
+            <label for="exampleInputName1" >situationfamiliale</label>
+              <select class="form-control"   ngModel name="situationfamiliale" >
+                <option value="CELEBATAIRE">CELEBATAIRE</option>
+                <option value="MARIE">MARIE</option>
+                <option  value="DIVORCE">DIVORCE</option>
+                <option  value="VEUF">VEUF</option>
+              </select>
+       
+            </div>
+
+          <div class="form-group col-md-3" >
+            <label for="exampleInputName1" >type adherent</label>
+              <select class="form-control"   ngModel name="typeadh" >
+                <option value="ACTIF">ACTIF</option>
+                <option value="RETRAITE">RETRAITE</option>
+               
+              </select>
+            </div>
+        </div>
+          
+        
+
+
+
+
+        <div  style="text-align: center;">
+          <button type="submit" class="btn btn-gradient-primary mr-2 " >ajouter adherent</button>
+          <button class="btn btn-light">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

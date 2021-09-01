@@ -1,0 +1,66 @@
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title  " style="text-align: center;">modifier sous  category </h4>
+        <br>
+        <form class="forms-sample" #categoryForm="ngForm" (ngSubmit)= "modifier_category()">
+          <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >nom</label>
+            <input type="text"  [(ngModel)] ="categoryToUpdate.nom" name ="nom" class="form-control" id="exampleInputName1" placeholder="nom">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">libelle</label>
+            <input type="text"  [(ngModel)] ="categoryToUpdate.libelle" name = libelle class="form-control" id="exampleInputEmail3" placeholder="libelle">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">valeur</label>
+            <input type="text"  [(ngModel)] ="categoryToUpdate.montant"  name = "montant" class="form-control" id="exampleInputEmail3" placeholder="valeur">
+          </div>
+         
+         
+        </div>
+
+        <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >duree</label>
+            <input type="text"  [(ngModel)] ="categoryToUpdate.duree" name="duree" class="form-control" id="exampleInputName1" placeholder="duree">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputEmail3">valeur maximum </label>
+            <input type="text"  [(ngModel)] ="categoryToUpdate.max"  name ="max" class="form-control" id="exampleInputEmail3" placeholder="valeur maximum">
+          </div>
+         
+        </div>
+          
+          
+        <div class="row ">
+          <div class="form-group col-md-4">
+            <label for="exampleInputName1" >TYPE</label>
+            
+            
+                <select class="form-control" [(ngModel)] ="categoryToUpdate.type" name="type" >
+                  <option value="FRAIS">FRAIS</option>
+                  <option value="UNITE">UNITE</option>
+                  
+                </select>
+                                  
+          </div>
+         
+         
+
+        </div>
+          
+        
+
+
+
+
+        <div  style="text-align: center;">
+          <button type="submit" class="btn btn-gradient-primary mr-2 " >modifier  category</button>
+          <button class="btn btn-light">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
